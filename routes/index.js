@@ -25,7 +25,7 @@ var getStatus = function(req, res){
 	} else {
 		client.documents.get(id, function(err, obj, resp){
 			if (err){
-				res.status(404).json({err_type:'box-error'})
+				res.status(404).json({err_type:'box-error'});
 			}
 
 			res.json(obj);
